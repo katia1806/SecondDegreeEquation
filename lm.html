@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<title>lm</title>
+	<SCRIPT type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=n2B0XvuKcAqm26PbVV1mEDxg5G3Utm2eskyZkr-U3kiAPzIU6VlDcvOGBWYQqPgVHtfqJoiE2_hyfuzSTzYTYOZBWzPdctqELk3WAL2AWvpGauRFsyU7qFFDrjcoPgaQWzP0gtgOQ3krXlEq5R6DB_JUgBr8ybWjLtFl4PRhMGNBZ5E-eT_scBeWg4WnjBc0hCofrMk5S1FINxAZVDm4syTGKK2LoFcIq9AIf2-V4POJegqpTWzDqlqDzlXVApacs8ADZSlLQ-YWKQtORL_2T2-Amx4OCEF4IFuv1iZUgXQgwZm7pX0SyfBlsrr3uOWEjR4gpwrujSTL1w--nKz71Fq-YiNRx36TFudLE_eB5dJ5e91Dc9UGuHAtbQyXTNVoGe4WS-O2QJQ3wBpIql0cTcKZ2KRM1gisBYLxHlu7GuzYE6Wz8Eqy57SQZMUSLYhTh_PrNXv-IABfW3X8OrCXQAhjk8ZvJQAVIp05bNI_dV50CHE-s14LKl2c8RwQ3deT7q5VomJVmPuOgIilimHsB1dTuqvi3uScsjmJWbNCfNwh59km6p7Rpp_n66PlTywkf2kGJjX1qu7TaLTK-fo4IdAdA95hAQz_HGA2WUbwAVFlKiWyRlXxaQulgUgEoYUUOy3VuBQEiTcdv22tBxeBlxCmsw6DHq3fXNBVEA6O2n4" charset="UTF-8"></script><script type="text/javaScript" > 
+		
+    <!--
+		function Resoudre_Equation(form1)
+		{
+		var A=prompt("Donnez la valeur de a:","a");
+		var B=prompt("Donnez la valeur de b:","b");
+		var C=prompt("Donnez la valeur de c:","c");
+	
+		if(typeof (A) === 'undefined' || A === null ||(!(-100000<A<100000)))
+		    {window.alert("resaisissez A");
+			return false;}
+		
+		if(typeof (B) === 'undefined' || B === null ||(!(-100000<B<100000)))
+			{window.alert("resaisissez B");
+			return false;}
+		
+		if(typeof C === 'undefined' || C === null ||(!(-100000<C<100000)))
+			{window.alert("resaisissez C");
+			return false;}
+		
+		
+		if(A==0){
+		window.alert("L'equation n'est pas de second degrés");}
+			else{
+			document.form1.VALa.value=A;
+			document.form1.VALb.value=B;
+			document.form1.VALc.value=C;
+			
+			var delta=(B*B-4*A*C);
+			var result=confirm("Voulez vous afficher delta?");}
+			if(result==true)
+				alert("Delta est:"+delta);
+			var root_part= Math.sqrt(delta);
+			if(delta<0)
+				alert("Delta est negatif il n'existe pas de solution!");
+			else
+			var denom=2*A;
+			var root1=(-B +root_part)/denom;
+			var root2=(-B -root_part)/denom;
+			document.form1.x1.value=root1;
+			document.form1.x2.value=root2;  
+			
+	}
+	//-->
+	</SCRIPT>
+	</head>
+	<body>
+	
+	
+		<form name="form1" method="post" onsubmit="event.preventDefault()">
+		<button name="button" type="submit" value="Resoudre" onClick="Resoudre_Equation(form1)" >Resoudre l'equation </button><br>
+		<p style="font-weight:bold">Equation:
+		<input type="number" name="VALa" readonly> x<sup>2</sup>+
+		<input type="number" name="VALb" readonly > x+
+		<input type="number" name="VALc" readonly> =0<br></p>
+		<p style="font-weight:bold">Solution:
+		X1=<input type="number" name="x1" readonly >
+		X2=<input type="number" name="x2" readonly></p>
+		</form>
+	</body>
+</html>
